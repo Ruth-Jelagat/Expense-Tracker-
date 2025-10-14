@@ -12,17 +12,14 @@ function App() {
 
   const [searchTerm, setSearchTerm] = useState("");
 
-  // Add expense
   function handleAddExpense(expense) {
     setExpenses([...expenses, expense]);
   }
 
-  // Delete expense
   function handleDelete(id) {
     setExpenses(expenses.filter((exp) => exp.id !== id));
   }
 
-  // Sorting
   function handleSort(field) {
     const sorted = [...expenses].sort((a, b) =>
       a[field].toLowerCase().localeCompare(b[field].toLowerCase())
@@ -30,7 +27,6 @@ function App() {
     setExpenses(sorted);
   }
 
-  // Search filter
   const filteredExpenses = expenses.filter(
     (exp) =>
       exp.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
