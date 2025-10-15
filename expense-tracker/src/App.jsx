@@ -35,7 +35,7 @@ function App() {
 
   return (
     <div className="container">
-      <h1>💰 Expense Tracker</h1>
+      <h1>Expense Tracker</h1>
 
       <ExpenseForm onAddExpense={handleAddExpense} />
       <SearchBar onSearch={setSearchTerm} />
